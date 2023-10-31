@@ -1,40 +1,48 @@
 {
-  "name": "supasmoothies",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@supabase/supabase-js": "^2.0.0-rc.13",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+  "name": "nextjs-blog-theme",
+  "description": "A customizable Next.js and Tailwind blog starter. Designed by the Bejamas agency.",
+  "author": "Bejamas and Netlify Inc.",
+  "contributors": [
+    "Charlie Gerard",
+    "Prince Wilson",
+    "Tara Manicsic",
+    "Thom Krupa"
+  ],
+  "homepage": "https://github.com/netlify-templates/nextjs-blog-theme",
+  "bugs": {
+    "url": "https://github.com/netlify-templates/nextjs-blog-theme/issues"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next",
+    "dev:watch": "next-remote-watch ./posts",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "@mapbox/rehype-prism": "^0.8.0",
+    "@netlify/plugin-nextjs": "4.14",
+    "@tailwindcss/typography": "^0.5.0",
+    "axios": "^0.27.2",
+    "classnames": "^2.3.1",
+    "cypress": "^10.1.0",
+    "gray-matter": "^4.0.2",
+    "next": "latest",
+    "next-mdx-remote": "^4.1.0",
+    "next-remote-watch": "1.0.0",
+    "prismjs": "^1.25.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "remark-gfm": "^3.0.1"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "eslint": "<9.0.0",
+    "eslint-config-next": "12.2.4",
+    "eslint-config-prettier": "^8.3.0",
+    "netlify-plugin-cypress": "~2.2.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^3.0.0"
   }
 }
